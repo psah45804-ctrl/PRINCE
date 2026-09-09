@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prince Jitendra Sha | Mechanical Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',Arial,sans-serif;
+    background:#050816;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+:root{
+    --bg:#050816;
+    --panel:#0b1021;
+    --panel2:#10162c;
+    --text:#f7f7fb;
+    --muted:#a8aec2;
+    --line:#222a42;
+    --purple:#8067ff;
+    --purple-light:#a995ff;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    height:75px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 7%;
+
+    position:sticky;
+    top:0;
+
+    z-index:100;
+
+    background:rgba(5,8,22,.90);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid var(--line);
+}
+
+.logo{
+    font-size:25px;
+    font-weight:800;
+}
+
+.logo span{
+    color:var(--purple);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:var(--muted);
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#fff;
+}
+
+.hire-btn{
+    background:linear-gradient(135deg,#8067ff,#6247ed);
+
+    padding:11px 20px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.menu{
+    display:none;
+
+    border:0;
+    background:none;
+
+    color:#fff;
+
+    font-size:25px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:calc(100vh - 75px);
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    align-items:center;
+
+    gap:50px;
+
+    padding:80px 8%;
+}
+
+.small-title{
+    color:var(--purple-light);
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+}
+
+.hero h1{
+    font-size:clamp(45px,6vw,78px);
+
+    line-height:1.02;
+
+    letter-spacing:-3px;
+
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:var(--purple-light);
+}
+
+.hero-description{
+    color:var(--muted);
+
+    max-width:650px;
+
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+}
+
+.btn{
+    padding:13px 22px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.primary{
+    background:var(--purple);
+}
+
+.secondary{
+    border:1px solid #46506c;
+}
+
+.primary:hover{
+    background:#6f55ef;
+}
+
+
+/* HERO STATS */
+
+.hero-stats{
+    display:flex;
+
+    gap:30px;
+
+    margin-top:50px;
+
+    flex-wrap:wrap;
+}
+
+.stat{
+    max-width:180px;
+}
+
+.stat strong{
+    display:block;
+
+    font-size:17px;
+}
+
+.stat span{
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image{
+    height:550px;
+
+    display:grid;
+
+    place-items:center;
+
+    position:relative;
+}
+
+.glow{
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        #603fe8 0%,
+        #211650 45%,
+        transparent 70%
+    );
+}
+
+.profile{
+    position:relative;
+
+    width:340px;
+    height:430px;
+
+    border-radius:
+    180px 180px 25px 25px;
+
+    overflow:hidden;
+
+    border:1px solid #46416e;
+
+    background:#171d32;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.5);
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center top;
+}
+
+
+/* Floating cards */
+
+.floating-card{
+    position:absolute;
+
+    background:rgba(10,15,34,.9);
+
+    border:1px solid #303956;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    backdrop-filter:blur(10px);
+}
+
+.floating-card .icon{
+    width:35px;
+    height:35px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#7056ee;
+
+    border-radius:8px;
+}
+
+.floating-card small{
+    display:block;
+
+    color:var(--muted);
+
+    font-size:10px;
+}
+
+.floating-card b{
+    font-size:11px;
+}
+
+.card-one{
+    left:0;
+    top:20%;
+}
+
+.card-two{
+    right:0;
+    bottom:20%;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:100px 8%;
+
+    max-width:1400px;
+
+    margin:auto;
+}
+
+.section-label{
+    color:var(--purple-light);
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+}
+
+.section-title{
+    font-size:46px;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-top:15px;
+}
+
+.section-title span{
+    color:var(--purple-light);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    margin-top:30px;
+}
+
+.about-grid p{
+    color:var(--muted);
+
+    margin-bottom:20px;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-header{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    margin-bottom:35px;
+}
+
+.skills-header p{
+    color:var(--muted);
+
+    max-width:420px;
+
+    font-size:14px;
+}
+
+.skills-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:15px;
+}
+
+.skill-card{
+    background:var(--panel);
+
+    border:1px solid var(--line);
+
+    padding:28px;
+
+    border-radius:12px;
+
+    min-height:230px;
+
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#5546a4;
+}
+
+.skill-number{
+    color:#777f98;
+
+    font-size:11px;
+}
+
+.skill-card h3{
+    margin-top:40px;
+
+    margin-bottom:12px;
+
+    font-size:19px;
+}
+
+.skill-card p{
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+    background:
+    linear-gradient(
+        180deg,
+        transparent,
+        #080d1d
+    );
+}
+
+.timeline{
+    margin-top:40px;
+
+    border-left:1px solid #4b5370;
+
+    padding-left:40px;
+}
+
+.timeline-item{
+    display:grid;
+
+    grid-template-columns:160px 1fr;
+
+    gap:30px;
+
+    position:relative;
+}
+
+.timeline-item::before{
+    content:"";
+
+    position:absolute;
+
+    left:-46px;
+
+    top:5px;
+
+    width:11px;
+    height:11px;
+
+    border-radius:50%;
+
+    background:var(--purple);
+
+    box-shadow:
+    0 0 0 6px #151a35;
+}
+
+.date{
+    color:#8e95aa;
+
+    font-size:12px;
+}
+
+.company{
+    color:var(--purple-light);
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+}
+
+.timeline-content h3{
+    font-size:27px;
+
+    margin:8px 0 18px;
+}
+
+.timeline-content p{
+    color:var(--muted);
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+    max-width:850px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-header{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    margin-bottom:35px;
+}
+
+.projects-header p{
+    color:var(--muted);
+
+    max-width:400px;
+
+    font-size:14px;
+}
+
+.project-grid{
+    display:grid;
+
+    grid-template-columns:
+    1.15fr 1fr 1fr;
+
+    gap:16px;
+}
+
+.project-card{
+    background:var(--panel);
+
+    border:1px solid var(--line);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#5546a4;
+}
+
+.project-image{
+    height:220px;
+
+    display:grid;
+
+    place-items:center;
+
+    font-size:85px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #30205e,
+        #0a1022 65%
+    );
+}
+
+.project-content{
+    padding:23px;
+}
+
+.project-content span{
+    color:var(--purple-light);
+
+    font-size:10px;
+
+    letter-spacing:1.5px;
+
+    font-weight:700;
+}
+
+.project-content h3{
+    font-size:20px;
+
+    margin:7px 0;
+}
+
+.project-content p{
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.achievements{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    border-top:1px solid var(--line);
+
+    margin-top:35px;
+}
+
+.achievement{
+    padding:25px 0;
+
+    border-right:1px solid var(--line);
+}
+
+.achievement:last-child{
+    padding-left:25px;
+
+    border-right:none;
+}
+
+.achievement span{
+    color:#8189a0;
+
+    font-size:10px;
+
+    letter-spacing:1.5px;
+}
+
+.achievement strong{
+    display:block;
+
+    margin-top:5px;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+    margin-top:30px;
+}
+
+.education-card{
+    background:var(--panel);
+
+    border:1px solid var(--line);
+
+    padding:30px;
+
+    border-radius:12px;
+}
+
+.education-card span{
+    color:#858da4;
+
+    font-size:10px;
+
+    letter-spacing:1.5px;
+}
+
+.education-card h3{
+    font-size:22px;
+
+    margin:10px 0 5px;
+}
+
+.education-card p{
+    color:var(--muted);
+
+    margin-bottom:18px;
+}
+
+.education-card strong{
+    color:var(--purple-light);
+
+    font-size:13px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box{
+    background:
+    linear-gradient(
+        135deg,
+        #10162c,
+        #080d1d
+    );
+
+    border:1px solid #343d5a;
+
+    border-radius:18px;
+
+    padding:50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:40px;
+}
+
+.contact-box h2{
+    font-size:46px;
+
+    line-height:1.1;
+
+    margin:12px 0;
+}
+
+.contact-box p{
+    color:var(--muted);
+
+    max-width:550px;
+}
+
+.contact-details{
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:15px;
+
+    font-size:14px;
+}
+
+.contact-details a:hover{
+    color:var(--purple-light);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:25px 8%;
+
+    border-top:1px solid var(--line);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#697188;
+
+    font-size:11px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links,
+    .hire-btn{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-image{
+        height:450px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        flex-direction:column;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 6%;
+    }
+
+    .hero{
+        padding:70px 6%;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .profile{
+        width:275px;
+        height:350px;
+    }
+
+    .hero-image{
+        height:400px;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    .education-grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline-item{
+        grid-template-columns:1fr;
+        gap:5px;
+    }
+
+    .achievements{
+        grid-template-columns:1fr;
+    }
+
+    .achievement{
+        border-right:none;
+
+        border-bottom:1px solid var(--line);
+    }
+
+    .achievement:last-child{
+        padding-left:0;
+
+        border-bottom:none;
+    }
+
+    .contact-box{
+        padding:30px;
+    }
+
+    .contact-box h2{
+        font-size:38px;
+    }
+
+    footer{
+        display:block;
+
+        padding:22px 6%;
+    }
+
+    footer span{
+        display:block;
+
+        margin:5px 0;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="navbar">
+
+    <a href="#home" class="logo">
+        PJS<span>.</span>
+    </a>
+
+    <nav class="nav-links">
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#experience">Experience</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#education">Education</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <a href="#contact" class="hire-btn">
+        Hire Me ↗
+    </a>
+
+    <button class="menu">
+        ☰
+    </button>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <div class="small-title">
+            DIPLOMA MECHANICAL ENGINEERING • FRESHER
+        </div>
+
+        <h1>
+            Hi, I'm <span>Prince</span><br>
+            I design things<br>
+            that work.
+        </h1>
+
+        <p class="hero-description">
+
+            Motivated Diploma Mechanical Engineering graduate
+            with strong knowledge of engineering fundamentals,
+            machine design, manufacturing processes and
+            engineering drawing.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn primary">
+                View My Work ↗
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Let's Connect
+            </a>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+            <div class="stat">
+
+                <strong>
+                    2023–Present
+                </strong>
+
+                <span>
+                    Diploma in Mechanical Engineering
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    2024–2025
+                </strong>
+
+                <span>
+                    Mechanical Design & Purchase
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    84.80%
+                </strong>
+
+                <span>
+                    SSC / 10th Percentage
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-image">
+
+        <div class="glow"></div>
+
+        <div class="profile">
+
+            <!-- Replace this image URL with your own image -->
+
+            <img
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+            alt="Prince Jitendra Sha"
+            >
+
+        </div>
+
+
+        <div class="floating-card card-one">
+
+            <div class="icon">
+                ⚙
+            </div>
+
+            <div>
+
+                <b>CAD</b>
+
+                <small>
+                    AutoCAD + 2D Drafting
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="floating-card card-two">
+
+            <div class="icon">
+                ⚙
+            </div>
+
+            <div>
+
+                <b>MECHANICAL</b>
+
+                <small>
+                    Design • Manufacturing • BOM
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="section-label">
+        01 / ABOUT ME
+    </div>
+
+
+    <div class="about-grid">
+
+        <div>
+
+            <h2 class="section-title">
+
+                Engineering mindset.<br>
+
+                <span>
+                    Practical execution.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p>
+
+                I am a motivated Diploma Mechanical Engineering
+                student/graduate with strong knowledge of engineering
+                fundamentals, machine design, manufacturing processes
+                and engineering drawing.
+
+            </p>
+
+
+            <p>
+
+                My experience includes preparing and modifying
+                2D engineering drawings, coordinating with production
+                teams, supporting procurement activities, checking
+                material specifications and maintaining purchase records.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="section-label">
+        02 / SKILLS
+    </div>
+
+
+    <div class="skills-header">
+
+        <h2 class="section-title">
+            Tools & strengths
+        </h2>
+
+        <p>
+
+            Technical knowledge backed by communication,
+            coordination and problem-solving.
+
+        </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill-card">
+
+            <span class="skill-number">
+                01
+            </span>
+
+            <h3>
+                CAD & Drafting
+            </h3>
+
+            <p>
+
+                AutoCAD, 2D engineering drawings,
+                part and assembly drawings,
+                dimensions, tolerances and annotations.
+
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <span class="skill-number">
+                02
+            </span>
+
+            <h3>
+                Mechanical Design
+            </h3>
+
+            <p>
+
+                Engineering fundamentals,
+                machine design concepts,
+                manufacturing processes
+                and design documentation.
+
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <span class="skill-number">
+                03
+            </span>
+
+            <h3>
+                Procurement
+            </h3>
+
+            <p>
+
+                Purchase support, vendor coordination,
+                price comparison, material verification
+                and purchase records.
+
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <span class="skill-number">
+                04
+            </span>
+
+            <h3>
+                Professional Skills
+            </h3>
+
+            <p>
+
+                Management, creativity,
+                communication, negotiation,
+                critical thinking and leadership.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience" class="experience">
+
+    <div class="section-label">
+        03 / EXPERIENCE
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="date">
+                2024 — 2025
+            </div>
+
+
+            <div class="timeline-content">
+
+                <div class="company">
+                    DHATVIK INDIA PVT LTD
+                </div>
+
+                <h3>
+                    Mechanical Design & Purchase Operations
+                </h3>
+
+
+                <p>
+
+                    Prepared and modified 2D engineering drawings
+                    using AutoCAD, including part and assembly drawings
+                    with proper dimensions, tolerances and annotations
+                    as per industry standards.
+
+                </p>
+
+
+                <p>
+
+                    Coordinated with production to ensure drawing
+                    accuracy and manufacturability; supported procurement
+                    through purchase preparation, vendor coordination,
+                    price comparison and timely follow-up for mechanical
+                    components and raw materials.
+
+                </p>
+
+
+                <p>
+
+                    Verified material specifications as per drawings
+                    and BOM, maintained purchase records and assisted
+                    inventory control.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="section-label">
+        04 / PROJECTS & ACHIEVEMENTS
+    </div>
+
+
+    <div class="projects-header">
+
+        <h2 class="section-title">
+            Selected work
+        </h2>
+
+        <p>
+
+            Engineering work and achievements from
+            my academic and professional journey.
+
+        </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <div class="project-card">
+
+            <div class="project-image">
+                ⚙
+            </div>
+
+            <div class="project-content">
+
+                <span>
+                    MECHANICAL DESIGN
+                </span>
+
+                <h3>
+                    Edge Baffle Plate
+                    Linkage Assembly
+                </h3>
+
+                <p>
+
+                    Engineering design and drafting work
+                    focused on practical mechanical components
+                    and assembly documentation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="project-card">
+
+            <div class="project-image">
+                ▱
+            </div>
+
+            <div class="project-content">
+
+                <span>
+                    CAD / ENGINEERING DRAWING
+                </span>
+
+                <h3>
+                    2D Part & Assembly Drawings
+                </h3>
+
+                <p>
+
+                    AutoCAD drawings with dimensions,
+                    tolerances and annotations prepared
+                    for production use.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="project-card">
+
+            <div class="project-image">
+                ↗
+            </div>
+
+            <div class="project-content">
+
+                <span>
+                    ACHIEVEMENT
+                </span>
+
+                <h3>
+                    Cluster Level CAD Achievement
+                </h3>
+
+                <p>
+
+                    Cluster Level in Mechanical Engineering
+                    CAD — December 2025.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="achievements">
+
+        <div class="achievement">
+
+            <span>
+                OCT 2024
+            </span>
+
+            <strong>
+                Edge Baffle Plate Linkage Assembly
+            </strong>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <span>
+                DEC 2025
+            </span>
+
+            <strong>
+                Cluster Level in Mechanical Engineering CAD
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+    <div class="section-label">
+        05 / EDUCATION
+    </div>
+
+
+    <div class="education-grid">
+
+
+        <div class="education-card">
+
+            <span>
+                2023 — PRESENT
+            </span>
+
+            <h3>
+                Diploma in Mechanical Engineering
+            </h3>
+
+            <p>
+                PCBOE (Diploma)
+            </p>
+
+            <strong>
+                CGPA — 8.3
+            </strong>
+
+        </div>
+
+
+
+        <div class="education-card">
+
+            <span>
+                2023 PASSED
+            </span>
+
+            <h3>
+                SSC (10th)
+            </h3>
+
+            <p>
+                Rai English High School
+            </p>
+
+            <strong>
+                Percentage — 84.80%
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="contact-box">
+
+        <div>
+
+            <div class="section-label">
+                06 / CONTACT
+            </div>
+
+            <h2>
+                Have a project<br>
+                in mind?
+            </h2>
+
+            <p>
+
+                I'm open to mechanical design,
+                CAD drafting, manufacturing
+                and engineering opportunities.
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-details">
+
+            <a href="tel:+919307580766">
+                ☎ +91 9307580766
+            </a>
+
+            <a href="mailto:psdh45804@gmail.com">
+                ✉ psdh45804@gmail.com
+            </a>
+
+            <span>
+                ⌖ Nagpur, Maharashtra
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <span>
+        © 2026 Prince Jitendra Sha
+    </span>
+
+    <span>
+        Mechanical Engineering Portfolio
+    </span>
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menu =
+document.querySelector(".menu");
+
+const nav =
+document.querySelector(".nav-links");
+
+
+menu.addEventListener("click",function(){
+
+    if(nav.style.display === "flex"){
+
+        nav.style.display="none";
+
+    }else{
+
+        nav.style.display="flex";
+
+        nav.style.position="absolute";
+
+        nav.style.top="75px";
+
+        nav.style.left="0";
+
+        nav.style.right="0";
+
+        nav.style.padding="25px 8%";
+
+        nav.style.background="#080d1d";
+
+        nav.style.flexDirection="column";
+
+    }
+
+});
+
+
+/* Close menu after clicking */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        if(window.innerWidth < 900){
+
+            nav.style.display="none";
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
